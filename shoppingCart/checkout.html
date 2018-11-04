@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/shoppingCart/all.css">
+
+    <title>六角血拼賣賣-結帳</title>
+    <style>
+        .main{
+            min-height: calc(100vh - (49px  + 155px));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand mr-auto" href="#">
+                <i class="fa fa-heart text-hexschool" aria-hidden="true"></i>
+                六角血拼賣賣
+            </a>
+            <div class="dropdown">
+                <button type="button" class="btn btn-cart bg-transparent" data-toggle="dropdown">
+                    <i class="fa fa-cart-plus fa-lg text-dark" aria-hidden="true"></i>
+                    <span class="badge badge-pill badge-danger">9</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right p-2" style="min-width:300px;" aria-labelledby="dropdownMenuLink">
+                    <table class="table table-sm mb-0">
+                        <thead>
+                            <tr>
+                                <td class="border-0" colspan="4">已選擇商品</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <i class="fa fa-trash-o" aria-hidden="true" data-toggle="modal" data-target="#deleteModal"
+                                        data-title="確定刪除 金牌西裝 1件"></i>
+                                </td>
+                                <td>金牌西裝</td>
+                                <td>1件</td>
+                                <td>$520</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <i class="fa fa-trash-o" aria-hidden="true" data-toggle="modal" data-target="#deleteModal"
+                                        data-title="確定刪除 金牌女裝 1件"></i>
+                                </td>
+                                <td>金牌女裝</td>
+                                <td>1件</td>
+                                <td>$480</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4" class="border-0">
+                                    <a href="checkout.html" class="btn btn-primary btn-sm btn-block mt-2">
+                                        <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
+                                        結帳去
+                                    </a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header-End -->
+
+    <!-- 主內容 -->
+    <div class="container main">
+        <h1 class="text-secondary text-center my-4">六角血拼 結帳</h1>
+        <!-- 結帳步驟 -->
+        <div class="form-row">
+            <div class="col-md-4">
+                <div class="alert alert-secondary alert-rounded" role="alert">
+                    1.輸入訂單資料
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-success alert-rounded" role="alert">
+                    2.金流付款
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-success alert-light" role="alert">
+                    3.完成
+                </div>
+            </div>
+        </div>
+        <!-- 結帳步驟-End -->
+
+        <!-- 訂購商品資訊 + 訂購人表單 -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+                <!-- 訂購商品資訊 -->
+                <div class="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <div class="mb-0 d-flex justify-content-between align-items-center">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    顯示購物車細節 <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </button>
+                                <span class="h3 mb-0">$520</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="collapse mt-3" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th width="30"></th>
+                                    <th width="100"></th>
+                                    <th class="text-center">商品名稱</th>
+                                    <th class="text-center" width="100">數量</th>
+                                    <th width="100">小計</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row" class="align-middle">
+                                        <i class="fa fa-trash-o" aria-hidden="true" data-toggle="modal" data-target="#deleteModal"
+                                            data-title="確定刪除 金牌西裝 1件"></i>
+                                    </td>
+                                    <td class="align-middle">
+                                        <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1494281258937-45f28753affd?w=1350">
+                                    </td>
+                                    <td class="align-middle">金牌西裝</td>
+                                    <td class="align-middle text-center">1件</td>
+                                    <td class="align-middle text-right">$520</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 訂購商品資訊-End -->
+
+                <!-- 訂購人表單 -->
+                <h5 class="mt-5 text-center bg-light text-secondary py-3">訂購人資訊</h5>
+                <form class="needs-validation" action="/shoppingCart/purchase.html" method="get" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="userName">姓名</label>
+                                <input type="text" class="form-control" name="userName" id="userName" placeholder="姓名"
+                                    required>
+                                <small class="invalid-feedback text-danger">請輸入姓名</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                                    required>
+                                <small class="invalid-feedback text-danger">請輸入正確的Email</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="county">國家</label>
+                                <select class="form-control" name="county" id="county">
+                                    <option value="taiwan">台灣</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="city">城市</label>
+                                <select class="form-control" name="city" id="city">
+                                    <option value="taipei">台北</option>
+                                    <option value="taichung">台中</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="postalCode">郵遞區號</label>
+                                <input type="text" class="form-control" name="postalCode" id="postalCode" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="address">地址</label>
+                                <input type="text" class="form-control" name="address" id="address" placeholder="請輸入地址"
+                                    required>
+                                <small class="invalid-feedback text-danger">請輸入地址</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <a class="btn btn-secondary" href="index.html">繼續選購</a>
+                        <button type="submit" class="btn btn-primary">確認付款</button>
+                    </div>
+                </form>
+                <!-- 訂購人表單-End -->
+            </div>
+        </div>
+        <!-- 訂購商品資訊 + 訂購人表單-End -->
+    </div>
+    <!-- 主內容-End -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-light">
+        <div class="container">
+            <div>
+                <ul class="list-inline  d-flex justify-content-center">
+                    <li class="list-inline-item mr-2 text-secondary">
+                        © Copright 2017 六角血拼賣賣
+                    </li>
+                    <li class="list-inline-item mr-2 text-info">
+                        <a class="text-hexschool" href="http://">Instagram</a>
+                    </li>
+                    <li class="list-inline-item mr-2 text-info">
+                        <a class="text-hexschool" href="http://">Facebook</a>
+                    </li>
+                    <li class="list-inline-item mr-2 text-info">
+                        <a class="text-hexschool" href="http://">About</a>
+                    </li>
+                </ul>
+                <p class="text-secondary text-center">Made with Bootstrap4</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer-End -->
+
+    <!-- 刪除 Modal -->
+    <div class="modal fade" id="deleteModal" data-backdrop="static" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    確認刪除此商品？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">否</button>
+                    <button type="button" class="btn btn-outline-danger px-5">是</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 刪除 Modal-End -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#deleteModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                var modal = $(this);
+                var modalTitle = button.data('title');
+                modal.find('.modal-title').text(modalTitle);
+            });
+        });
+    </script>
+</body>
+
+</html>

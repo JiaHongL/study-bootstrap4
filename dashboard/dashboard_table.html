@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="all.css">
+    <title>商務控制後台</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">商務控制後台</a>
+            <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard/dashboard_index.html">首頁</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/dashboard/dashboard_table.html">列表</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Header-End -->
+
+    <!-- 主內容 -->
+    <div class="container-fluid main">
+        <!-- 收尋列 -->
+        <div class="d-flex my-3">
+            <div class="w-25 mr-auto">
+                <div class="input-group ">
+                    <input type="text" class="form-control" data-toggle="tooltip" data-html="true" title="<em>按下Enter 快速收尋</em>">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button">Go!</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-title="快速下單" data-target="#editModel"
+                    data-user-name="mark" data-user-mail="Mark@mail.com" data-product="超纖細肥皂1盒" data-count="1">快速下單</button>
+            </div>
+        </div>
+        <!-- 收尋列-End -->
+
+        <!-- 表格 -->
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>品項</th>
+                    <th>Name</th>
+                    <th>Mail</th>
+                    <th>狀態</th>
+                    <th>金額</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row"><strong>1</strong></td>
+                    <td class="text-primary">超纖細肥皂1盒</td>
+                    <td>
+                        Mark <span class="badge badge-pill badge-danger">奧客</span>
+                    </td>
+                    <td>Mark@mail.com</td>
+                    <td>已出貨</td>
+                    <td>NT$ 899</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-title="編輯 超纖細肥皂1盒"
+                                data-target="#editModel" data-user-name="mark" data-user-mail="Mark@mail.com"
+                                data-product="超纖細肥皂1盒" data-count="1">編輯</button>
+                            <button type="button" class="btn btn-outline-secondary">查看</button>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button id="dropdownId" type="button" class="btn btn-outline-secondary dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    其他
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                    <a class="dropdown-item" href="#">操作紀錄</a>
+                                    <a class="dropdown-item" href="#">資料匯出</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#deleteModal"
+                                        data-title="確定刪除此訂單？" data-user-name="Mark" data-product="超纖細肥皂1盒">刪除訂單</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td scope="row"><strong>2</strong></td>
+                    <td class="text-primary">(保證)無泡泡沐浴乳 5罐</td>
+                    <td>
+                        Jacob <span class="badge badge-pill badge-success">常客</span>
+                    </td>
+                    <td>Jacob@mail.com</td>
+                    <td class="text-danger">缺貨</td>
+                    <td>NT$ 3,600</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-title="編輯 (保證)無泡泡沐浴乳 5罐"
+                                data-target="#editModel" data-user-name="Jacob" data-user-mail="Jacob@mail.com"
+                                data-product="(保證)無泡泡沐浴乳 5罐" data-count="5">編輯</button>
+                            <button type="button" class="btn btn-outline-secondary">查看</button>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button id="dropdownId" type="button" class="btn btn-outline-secondary dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    其他
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                    <a class="dropdown-item" href="#">操作紀錄</a>
+                                    <a class="dropdown-item" href="#">資料匯出</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#deleteModal"
+                                        data-title="確定刪除此訂單？" data-user-name="Jacob" data-product="(保證)無泡泡沐浴乳 5罐">刪除訂單</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row"><strong>3</strong></td>
+                    <td class="text-primary">防滑燈罩 100個</td>
+                    <td>
+                        Larry
+                    </td>
+                    <td>Larry@mail.com</td>
+                    <td>已出貨</td>
+                    <td>NT$ 14,060</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-title="編輯 防滑燈罩 100個"
+                                data-target="#editModel" data-user-name="Larry" data-user-mail="Larry@mail.com"
+                                data-product="防滑燈罩 100個" data-count="100">編輯</button>
+                            <button type="button" class="btn btn-outline-secondary">查看</button>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button id="dropdownId" type="button" class="btn btn-outline-secondary dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    其他
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                    <a class="dropdown-item" href="#">操作紀錄</a>
+                                    <a class="dropdown-item" href="#">資料匯出</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#deleteModal"
+                                        data-title="確定刪除此訂單？" data-user-name="Larry" data-product="防滑燈罩 100個">刪除訂單</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar"
+                                style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        ...
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        ...
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        ...
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        ...
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        ...
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <!-- 表格-End -->
+
+        <!-- 頁碼 -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination  d-flex justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 頁碼-End -->
+    </div>
+    <!-- 主內容-End -->
+
+    <!-- 快速下單 & 編輯 Modal -->
+    <div class="modal fade" id="editModel" data-backdrop="static" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="userName">用戶名稱</label>
+                            <input type="text" id="userName" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="userMail">Email address</label>
+                            <input type="email" class="form-control" id="userMail" placeholder="">
+                        </div>
+                        <div class="form-row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="product">品項</label>
+                                    <input type="text" id="product" class="form-control" placeholder="" readonly>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="count">數量</label>
+                                    <select class="form-control" id="count">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Change</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 快速下單 & 編輯 Modal-End -->
+
+    <!-- 刪除 Modal -->
+    <div class="modal fade" id="deleteModal" data-backdrop="static" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span class="userName"></span> 的 <span class="product"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Change</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 刪除 Modal-End -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('#editModel').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget)
+                var modal = $(this);
+                var modalTitle = button.data('title');
+                var data = {
+                    userName: button.data('userName'),
+                    userMail: button.data('userMail'),
+                    product: button.data('product'),
+                    count: button.data('count'),
+                };
+                modal.find('.modal-title').text(modalTitle);
+                Object.keys(data).forEach(function (item) {
+                    modal.find('#' + item).val(data[item]);
+                });
+            });
+            $('#deleteModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget)
+                var modal = $(this);
+                var modalTitle = button.data('title');
+                var userName = button.data('userName');
+                var product = button.data('product');
+                modal.find('.modal-title').text(modalTitle);
+                modal.find('.userName').text(userName);
+                modal.find('.product').text(product);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

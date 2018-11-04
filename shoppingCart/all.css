@@ -1,0 +1,59 @@
+html{
+    font-size: 14px;
+}
+
+.bg-hexschool{
+    background-color:#00cc99 !important;
+}
+
+.bg-lighter{
+    background-color: rgba(255, 255, 255, .45);
+}
+
+.text-hexschool{
+    color:#00cc99 !important;
+}
+
+.bg-transparent{
+    background-color: transparent;
+}
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+}
+
+.btn-cart{
+    position: relative;
+}
+
+.btn-cart .badge{
+    position: absolute;
+    top:1px;
+    right:-1px;
+}
+
+.btn.disabled{
+    pointer-events: none;
+}
+
+.jumbotron{
+    background-size: cover;
+    background-position: center center;
+    min-height:400px;
+    background-image:url(https://images.unsplash.com/photo-1477901492169-d59e6428fc90?w=1350)
+}
+
+
+.box-shadow{
+    box-shadow:0 3px 5px rgba(0, 0, 0, .16);
+    transition: box-shadow .3s;
+}
+
+.box-shadow:hover{
+    box-shadow:0 3px 5px rgba(0, 0, 0, .24);
+}
+
+
+.alert-rounded {
+    border-radius: 50px;
+}
